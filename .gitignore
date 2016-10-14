@@ -10,3 +10,11 @@
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
+systeminfo-transport/.settings/org.eclipse.m2e.core.prefs
+*.prefs
+systeminfo-transport/.classpath
+*.MF
+systeminfo-transport/target/classes/OSGI-INF/blueprint/config.xml
+systeminfo-transport/target/classes/com/esri/geoevent/transport/systeminfo-transport.properties
+systeminfo-transport/target/classes/systeminfo-inbound-transport-definition.xml
+systeminfo-transport/target/classes/com/esri/geoevent/transport/systeminfo-transport_en_US.properties

@@ -1,0 +1,18 @@
+<transport name="SystemInfo"
+	label="${com.esri.geoevent.transport.systeminfo-transport.TRANSPORT_IN_LBL}"
+	contact="mpilouk@esri.com" version="10.4.0"
+	domain="com.esri.geoevent.transport.systeminfo.inbound" type="inbound">
+	<description>${com.esri.geoevent.transport.systeminfo-transport.TRANSPORT_IN_DESC}
+	</description>
+	<propertyDefinitions>
+		<propertyDefinition propertyName="updateIntervalSeconds"
+			label="${com.esri.geoevent.transport.systeminfo-transport.TRANSPORT_IN_UPDATEINTERVALSECONDS_LBL}"
+			description="${com.esri.geoevent.transport.systeminfo-transport.TRANSPORT_IN_UPDATEINTERVALSECONDS_DESC}"
+			propertyType="Integer" defaultValue="1" mandatory="true"
+			readOnly="false" />
+	</propertyDefinitions>
+</transport>
+		    <!-- 
+		     label="Update Interval (seconds)"
+		     description="System Information update interval in seconds"
+		     -->
