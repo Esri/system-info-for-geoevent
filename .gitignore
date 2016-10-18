@@ -18,3 +18,10 @@ systeminfo-transport/target/classes/OSGI-INF/blueprint/config.xml
 systeminfo-transport/target/classes/com/esri/geoevent/transport/systeminfo-transport.properties
 systeminfo-transport/target/classes/systeminfo-inbound-transport-definition.xml
 systeminfo-transport/target/classes/com/esri/geoevent/transport/systeminfo-transport_en_US.properties
+systeminfo-transport/bin/src/main/resources/systeminfo-inbound-transport-definition.xml
+systeminfo-transport/bin/src/main/resources/com/esri/geoevent/transport/systeminfo-transport.properties
+systeminfo-transport/bin/pom.xml
+systeminfo-transport/bin/.project
+systeminfo-transport/bin/src/main/resources/com/esri/geoevent/transport/systeminfo-transport_en_US.properties
+systeminfo-transport/bin/src/main/resources/OSGI-INF/blueprint/config.xml
+.project

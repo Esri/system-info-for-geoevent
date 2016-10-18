@@ -162,6 +162,8 @@ public class SystemInfoInboundTransport extends InboundTransportBase implements 
 
 	        } // if
 	      } // for
+	      int nbThreads = Thread.getAllStackTraces().keySet().size();
+	      json += "\"threads\":" + nbThreads + ",";
 	      json += "\"DatetimeStamp\":" + new Date().getTime();
         json += "}}";              
         log.debug(json);
