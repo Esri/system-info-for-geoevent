@@ -12,7 +12,3 @@
 			readOnly="false" />
 	</propertyDefinitions>
 </transport>
-		    <!-- 
-		     label="Update Interval (seconds)"
-		     description="System Information update interval in seconds"
-		     -->

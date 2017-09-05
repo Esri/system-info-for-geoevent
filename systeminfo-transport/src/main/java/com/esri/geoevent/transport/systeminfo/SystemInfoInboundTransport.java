@@ -1,5 +1,5 @@
 /*
-  Copyright 1995-2015 Esri
+  Copyright 1995-2017 Esri
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
@@ -101,14 +101,6 @@ public class SystemInfoInboundTransport extends InboundTransportBase implements 
 	
 	private void receiveData()
 	{
-	  //getProcessCpuLoad = 0.03333098614553869
-	  //getSystemCpuLoad = 0.364935252001385
-	  //getTotalPhysicalMemorySize = 12867305472
-	  //getFreePhysicalMemorySize = 1022410752
-	  //getProcessCpuTime = 7919765167400
-	  //getFreeSwapSpaceSize = 10552115200
-	  //getTotalSwapSpaceSize = 38600011776
-	  //getCommittedVirtualMemorySize = 3142553600
 		try
 		{
 			applyProperties();
@@ -123,12 +115,6 @@ public class SystemInfoInboundTransport extends InboundTransportBase implements 
           socket.connect(InetAddress.getByName("8.8.8.8"), 10002);
           address = socket.getLocalAddress().getHostAddress();
           hostname = socket.getLocalAddress().getCanonicalHostName();
-         
-          /*
-          addr = InetAddress.getLocalHost();
-          address = addr.toString();
-          hostname = addr.getHostName();
-          */
       }
       catch (UnknownHostException ex)
       {
@@ -239,34 +225,3 @@ public class SystemInfoInboundTransport extends InboundTransportBase implements 
 		return false;
 	}
 }
-
-/*
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<connectorDefinition accessType="editable" label="Json System Information Inbound" name="json-systeminfo-in" type="inbound">
-    <adapter uri="com.esri.ges.adapter.inbound/Generic-JSON/10.4.1"/>
-    <defaultName>json-systeminfo-in</defaultName>
-    <description>Json System Information</description>
-    <properties>
-        <advanced>
-            <property default="false" label="Learning Mode" name="isLearningMode" source="adapter"/>
-            <property default="true" label="Create GeoEvent Definition" name="CreateGeoEventDefinition" source="adapter"/>
-            <property default="OperatingSystemInformation" label="GeoEvent Definition Name (Existing)" name="ExistingGeoEventDefinitionName" source="adapter"/>
-            <property default="NewFeatureGeoEventDef" label="GeoEvent Definition Name (New)" name="NewGeoEventDefinitionName" source="adapter"/>
-        </advanced>
-        <hidden>
-            <property label="Expected Date Format" name="CustomDateFormat" source="adapter"/>
-            <property default="false" label="Build Geometry From Fields" name="BuildGeometryFromFields" source="adapter"/>
-            <property label="X Geometry Field" name="XGeometryField" source="adapter"/>
-            <property label="Y Geometry Field" name="YGeometryField" source="adapter"/>
-            <property label="Z Geometry Field" name="ZGeometryField" source="adapter"/>
-            <property label="wkid Geometry Field" name="WKIDGeometryField" source="adapter"/>
-            <property label="Well Known Text Geometry Field" name="WKTextGeometryField" source="adapter"/>
-            <property default="OperatingSystemInformation" label="JSON Object Name" name="JsonObjectName" source="adapter"/>
-        </hidden>
-        <shown>
-            <property default="1" label="Update Interval (seconds)" name="updateIntervalSeconds" source="transport"/>
-        </shown>
-    </properties>
-    <transport uri="com.esri.geoevent.transport.systeminfo.inbound/SystemInfo/10.4.0"/>
-</connectorDefinition> 
-*/ 
